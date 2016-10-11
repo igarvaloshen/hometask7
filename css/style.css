@@ -137,9 +137,7 @@ ol{
     height: 790px;
 }
 #iview-timer  {
-    opacity: 0;
-    width: 0;
-    height: 0;
+    display: none !important;
 }
 .iview-prevNav  {
     width: 24px;
@@ -152,5 +150,11 @@ ol{
     background-image: url("../img/right-arrow.png");
 }
 .iviewSlider    {
-    background-size: 100% 100%;
+    background-size: cover !important;
+}
+.cover   {
+    background-size: cover !important;
+}
+.iview-strip    {
+    background-size: cover !important;
 }
