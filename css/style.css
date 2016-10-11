@@ -35,12 +35,23 @@ header  {
 .navbar-li  {
     display: inline-block;
     margin-left: 50px;
+    position: relative;
 }
 .menu-href  {
     text-decoration: none;
     font-family: helveticaneuecyrthin, sans-serif;
     font-size: 36px;
     color: black;
+}
+.navbar-li::after   {
+    content: '';
+    width: 36px;
+    height: 1px;
+    border-bottom: 1px solid #ca3e38;
+    position: absolute;
+    top: 129%;
+    left: 50%;
+    margin-left: -19px;
 }
 .menu-href:hover    {
     color: #88140f;
@@ -157,4 +168,59 @@ ol{
 }
 .iview-strip    {
     background-size: cover !important;
+}
+footer  {
+    background-color: white;
+}
+.test-drive {
+    display: inline-block;
+    width: 40%;
+}
+form   {
+    font-size: 0;
+}
+.form-title {
+    font-size: 36px;
+    font-family: helveticaneuecyrthin, sans-serif;
+    color: #fe372f;
+    font-weight: 100;
+}
+form p  {
+    font-size: 14px;
+    font-family: helveticaneuecyrmedium, sans-serif;
+}
+.name   {
+    display: block;
+    width: 269px;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid #999999;
+    margin-bottom: 20px;
+}
+input,
+select  {
+    outline: none;
+}
+#datepicker {
+    width: 121px;
+    height: 30px;
+    padding: 4px;
+    margin-right: 19px;
+}
+#hour,
+#minutes    {
+    width: 64px;
+    height: 42px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../img/input-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 35px center;
+}
+#hour   {
+    border-right: none;
+}
+#minutes    {
+    border-left: none;
 }
