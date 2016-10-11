@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper  {
+    width: 1420px;
+    margin: 0 auto;
+}
+header  {
+    background-image: url("../img/header-background.jpg");
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.logo   {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+    width: 32%;
+}
+.toyota {
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo-title {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 24px;
+    color: #ca3e38;
+    font-family: helveticaneuecyrmedium,sans-serif;
+}
+.navbar {
+    display: inline-block;
+}
+.navbar-li  {
+    display: inline-block;
+    margin-left: 50px;
+}
+.menu-href  {
+    text-decoration: none;
+    font-family: helveticaneuecyrthin, sans-serif;
+    font-size: 36px;
+    color: black;
+}
+.menu-href:hover    {
+    color: #88140f;
+    transition: 0.2s;
+}
+.main   {
+    background-image: url("../img/drive-the-dream-theme.jpg");
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+.main-title {
+    font-family: helveticaneuecyrbold_italic, sans-serif;
+    font-size: 109px;
+    color: white;
+    padding-top: 125px;
+    width: 50%;
+    margin-bottom: 75px;
+    text-align: left;
+}
+.red-span   {
+    color: #fe372f;
+}
+.social-and-tel {
+    background: rgba(255,245,215,.5);
+    display: inline-block;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    width: 36%;
+}
+.join-us    {
+    font-family: helveticaneuecyrmedium,sans-serif;
+    font-size: 16px;
+
+}
+.socials    {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.main-news  {
+    display: inline-block;
+    width: calc(37% - 50px);
+    vertical-align: top;
+    padding-bottom: 125px;
+}
+.main-news-mod  {
+    margin-left: 50px;
+}
+h1  {
+    font-family: helveticaneuecyrthin, sans-serif;
+    font-size: 36px;
+    color: #810500;
+    font-weight: 100;
+    width: 75%;
+    text-align: left;
+    margin-bottom: 35px;
+}
+ul  {
+    list-style: square;
+    position: relative;
+}
+li  {
+    font-family: helveticaneuecyrmedium, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: white;
+}
+.main-title-h2 {
+    font-family: helveticaneuecyrthin, sans-serif;
+    font-size: 21px;
+    color: #810500;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 35px;
+}
+.num    {
+    list-style: none;
+}
+ol{
+    counter-reset: myCounter;
+}
+.num:before {
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: #fe372f;
+    position: absolute;
+    left: 50%
+}
+#iview  {
+    position: relative;
+    height: 790px;
+}
+#iview-timer  {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.iview-prevNav  {
+    width: 24px;
+    height: 81px;
+    background-image: url("../img/left-arrow.png");
+}
+.iview-nextNav  {
+    width: 24px;
+    height: 81px;
+    background-image: url("../img/right-arrow.png");
+}
+.iviewSlider    {
+    background-size: 100% 100%;
+}
