@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/iview.css">
-    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
     <script src="js/raphael-min.js" type="text/javascript"></script>
     <script src="js/jquery.easing.js" type="text/javascript"></script>
     <script src="js/iview.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
     <link rel="stylesheet" href="css/style.css"/>
 
     <title></title>
@@ -21,7 +26,20 @@
         <div class="navbar">
             <ul class="navbar-ul">
                 <li class="navbar-li"><a class="menu-href" href="#">Салон</a></li>
-                <li class="navbar-li"><a class="menu-href" href="#">Модели</a></li>
+                <li class="navbar-li">
+                    <a class="menu-href" href="#">Модели</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-li">
+                            <a href="" class="dropdown-href">Venza</a>
+                        </li>
+                        <li class="dropdown-li">
+                            <a href="" class="dropdown-href">Corolla</a>
+                        </li>
+                        <li class="dropdown-li">
+                            <a href="" class="dropdown-href">Camry</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="navbar-li"><a class="menu-href" href="#">Тест-Драйв</a></li>
                 <li class="navbar-li"><a class="menu-href" href="#">Акции</a></li>
                 <li class="navbar-li"><a class="menu-href" href="#">Контакты</a></li>
@@ -37,18 +55,19 @@
     <div class="social-and-tel">
             <p class="join-us">Присоединяйся к нам:</p>
 
-        <div class="socials fb"></div>
-        <div class="socials g-plus"></div>
-        <div class="socials twitter"></div>
-        <div class="socials vk"></div>
+        <a href="#" class="socials fb"></a>
+        <a href="#" class="socials g-plus"></a>
+        <a href="#" class="socials linkedin"></a>
+        <a href="#" class="socials vk"></a>
+        <p class="join-us join-us-mod">+38 (057) 757 86 87</p>
     </div>
 
     <div class="main-news">
         <h1>Душа моя озарена неземной радостью.</h1>
-        <ul>
-            <li>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</li>
-            <li>Я совсем один и блаженствую в здешнем краю.</li>
-            <li>Словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</li>
+        <ul class="main-content-ul">
+            <li class="main-content-li">Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</li>
+            <li class="main-content-li">Я совсем один и блаженствую в здешнем краю.</li>
+            <li class="main-content-li">Словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</li>
         </ul>
     </div>
     <div class="main-news main-news-mod">
@@ -68,38 +87,100 @@
 <section class="slider">
 <div id="iview">
     <!-- Slide 1 -->
-    <div class="cover" data-iview:image="img/slide-venza.jpg" width="100%" data-height="790px">
+    <div class="cover" data-iview:image="img/slide-venza.jpg" data-width="100%" data-height="595px">
         <!-- Caption -->
-        <div class="iview-caption" data-x="0" data-y="0" data-width="400" data-height="300" data-transition="expandLeft" data-speed="700"><h3>The Responsive Caption</h3>This is the product that you <b><i>all have been waiting for</b></i>!<br><br>Customize this slider with just a little HTML and CSS to your very needs. Give each slider some captions to transport your message.<br><br>All in all it works on every browser (including IE6 / 7 / 8) and on iOS and Android devices!</div>
+        <div class="iview-caption" data-x="0" data-y="0" data-width="400" data-height="300" data-transition="expandRight" data-speed="1300"> </div>
     </div>
     <!-- Slide 2 -->
     <div class="cover" data-iview:image="img/slide-corolla.jpg" data-width="100%">
         <!-- Caption -->
-        <div class="iview-caption" data-x="70" data-y="70" data-transition="expandLeft">Caption Description</div>
+        <div class="iview-caption" data-x="70" data-y="70" data-transition="expandRight" data-speed="1300"> </div>
     </div>
 </div>
 </section>
-<footer>
+<section class="form-section">
 <div class="wrapper">
-    <form class="test-drive" action="#">
+    <form class="test-drive" id="test-drive-form"action="#">
         <h3 class="form-title">Тест Драйв</h3>
-        <p>Имя</p>
-        <input type="text" class="name"/>
-        <input type="text" id="datepicker"/>
-        <select name="time" id="hour">
-            <option value=""></option>
-        </select>
-        <select name="time" id="minutes">
-            <option value=""></option>
-        </select>
-        <input type="radio" name="car"/>
-        <input type="radio" name="car"/>
-        <input type="checkbox"/>
-        <input type="submit"/>
-    </form>
-</div>
-</footer>
+        <label for="name" class="name">Имя</label>
+        <input type="text" id="name"/>
 
+        <div class="select-date">
+        <label for="datepicker" class="date">Дата</label>
+        <input type="text" id="datepicker"/>
+        </div>
+
+        <div class="time-select">
+        <label for="hour" class="time">Время</label>
+        <select name="time" id="hour" form="test-drive-form">
+            <option value="" selected></option>
+            <option value="">10</option>
+            <option value="">11</option>
+            <option value="">12</option>
+            <option value="">13</option>
+            <option value="">14</option>
+            <option value="">15</option>
+            <option value="">16</option>
+            <option value="">17</option>
+        </select>
+        <select name="time" id="minutes" form="test-drive-form">
+            <option value="" selected></option>
+            <option value="">00</option>
+            <option value="">30</option>
+        </select>
+        </div>
+
+        <p class="model">Модель</p>
+        <input type="radio" name="car" id="venza"/>
+        <label for="venza" class="venza-label">Venza</label><br/>
+        <input type="radio" name="car" id="corolla"/>
+        <label for="corolla" class="corolla-label">Corolla</label><br/>
+        <input type="checkbox" id="agree"/>
+        <label for="agree" class="agree-label">Согласен с условиями тест драйва.</label>
+        <input type="submit" value="записаться"/>
+    </form>
+    <div class="footer-slider">
+        <h3 class="form-title">Отзывы</h3>
+    <ul class="bxslider">
+        <li class="bxslider-parts">
+            <div class="comment"> </div>
+            <p class="comment-content">
+                <span class="qoute">«</span>Вообще, отличные ребята, должен заметить<span class="qoute">»</span>
+            </p>
+            <p class="comment-p">Вася Петин друг.</p>
+
+        </li>
+        <li class="bxslider-parts">
+            <div class="comment"> </div>
+            <p class="comment-content">
+                <span class="qoute">«</span>Вообще, отличные ребята, должен заметить<span class="qoute">»</span>
+            </p>
+            <p class="comment-p">Вася Петин друг.</p>
+        </li>
+        <li class="bxslider-parts">
+            <div class="comment"> </div>
+            <p class="comment-content">
+                <span class="qoute">«</span>Вообще, отличные ребята, должен заметить<span class="qoute">»</span>
+            </p>
+            <p class="comment-p">Вася Петин друг.</p>
+        </li>
+        <li class="bxslider-parts">
+            <div class="comment"> </div>
+            <p class="comment-content">
+                <span class="qoute">«</span>Вообще, отличные ребята, должен заметить<span class="qoute">»</span>
+            </p>
+            <p class="comment-p">Вася Петин друг.</p>
+        </li>
+    </ul>
+</div>
+</div>
+</section>
+<footer>
+    <div class="wrapper">
+        <p class="copyrights">Copyright © <span class="red-span">Toyota</span> centr 2014</p>
+        <p class="copyrights copyrights-mod">Создание сайта</p>
+    </div>
+</footer>
 
 
 

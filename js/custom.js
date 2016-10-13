@@ -1,54 +1,66 @@
 
     $(document).ready(function() {
         $('#iview').iView({
-            fx: 'fade', // установите эффект, например: 'left-curtain,fade,zigzag-top,strip-left-fade' (достпуные эффекты читайте ниже)
-            easing: 'easeOutQuad', // полный список эффектов тут: http://jqueryui.com/demos/effect/easing.html
-            strips: 20, // количество полос для их же анимации
-            blockCols: 10, // количество колонок для блочной анимации
-            blockRows: 5, // количество строк для блочной анимации
-            captionSpeed: 500, // скорость эффекта перехода для Заголовка
-            captionEasing: 'easeInOutSine', // easing эффект для заголовка
-            captionOpacity: 1, // прозрачность заголовка
-            animationSpeed: 200, // скорость анимациии слайдов
-            pauseTime: 5000, // как доолго будет показываться каждый слайд
-            startSlide: 1, // установвка начального слайда (0 index)
-            directionNav: true, // навигация Вперед/Назад
-            directionNavHoverOpacity: 0.6, // Fade при наведении курсора
-            controlNav: false, // 1,2,3,4... цифровая навигация
-            controlNavNextPrev: true, // навигация Вперед/Назад
-            controlNavHoverOpacity: 0.6, // fade эффект при наведении на наввигацию
-            controlNavThumbs: false, // Показывать миниатюры на навигации
-            controlNavTooltip: true, // Показывать превьюшки изображений ввиде тултипов
+            fx: 'fade', // СѓСЃС‚Р°РЅРѕРІРёС‚Рµ СЌС„С„РµРєС‚, РЅР°РїСЂРёРјРµСЂ: 'left-curtain,fade,zigzag-top,strip-left-fade' (РґРѕСЃС‚РїСѓРЅС‹Рµ СЌС„С„РµРєС‚С‹ С‡РёС‚Р°Р№С‚Рµ РЅРёР¶Рµ)
+            easing: 'easeOutQuad', // РїРѕР»РЅС‹Р№ СЃРїРёСЃРѕРє СЌС„С„РµРєС‚РѕРІ С‚СѓС‚: http://jqueryui.com/demos/effect/easing.html
+            strips: 20, // РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕСЃ РґР»СЏ РёС… Р¶Рµ Р°РЅРёРјР°С†РёРё
+            blockCols: 10, // РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕР»РѕРЅРѕРє РґР»СЏ Р±Р»РѕС‡РЅРѕР№ Р°РЅРёРјР°С†РёРё
+            blockRows: 5, // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґР»СЏ Р±Р»РѕС‡РЅРѕР№ Р°РЅРёРјР°С†РёРё
+            captionSpeed: 500, // СЃРєРѕСЂРѕСЃС‚СЊ СЌС„С„РµРєС‚Р° РїРµСЂРµС…РѕРґР° РґР»СЏ Р—Р°РіРѕР»РѕРІРєР°
+            captionEasing: 'easeInOutSine', // easing СЌС„С„РµРєС‚ РґР»СЏ Р·Р°РіРѕР»РѕРІРєР°
+            captionOpacity: 1, // РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР°
+            animationSpeed: 200, // СЃРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРёРё СЃР»Р°Р№РґРѕРІ
+            pauseTime: 5000, // РєР°Рє РґРѕРѕР»РіРѕ Р±СѓРґРµС‚ РїРѕРєР°Р·С‹РІР°С‚СЊСЃСЏ РєР°Р¶РґС‹Р№ СЃР»Р°Р№Рґ
+            startSlide: 1, // СѓСЃС‚Р°РЅРѕРІРІРєР° РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СЃР»Р°Р№РґР° (0 index)
+            directionNav: true, // РЅР°РІРёРіР°С†РёСЏ Р’РїРµСЂРµРґ/РќР°Р·Р°Рґ
+            directionNavHoverOpacity: 0.6, // Fade РїСЂРё РЅР°РІРµРґРµРЅРёРё РєСѓСЂСЃРѕСЂР°
+            controlNav: false, // 1,2,3,4... С†РёС„СЂРѕРІР°СЏ РЅР°РІРёРіР°С†РёСЏ
+            controlNavNextPrev: true, // РЅР°РІРёРіР°С†РёСЏ Р’РїРµСЂРµРґ/РќР°Р·Р°Рґ
+            controlNavHoverOpacity: 0.6, // fade СЌС„С„РµРєС‚ РїСЂРё РЅР°РІРµРґРµРЅРёРё РЅР° РЅР°РІРІРёРіР°С†РёСЋ
+            controlNavThumbs: false, // РџРѕРєР°Р·С‹РІР°С‚СЊ РјРёРЅРёР°С‚СЋСЂС‹ РЅР° РЅР°РІРёРіР°С†РёРё
+            controlNavTooltip: true, // РџРѕРєР°Р·С‹РІР°С‚СЊ РїСЂРµРІСЊСЋС€РєРё РёР·РѕР±СЂР°Р¶РµРЅРёР№ РІРІРёРґРµ С‚СѓР»С‚РёРїРѕРІ
             autoAdvance: false, // Force auto transitions
-            keyboardNav: true, // использование стрелок влево / вправо
-            touchNav: true, // использование Touch swipe для смены слайдов
-            pauseOnHover: false, // остановка слайдшоу при наведении
-            nextLabel: "", // текст для кнопки "Вперед"
-            previousLabel: "", // текст для кнопки "Назад"
-            playLabel: "Play", // текст для кнопки "Плей"
-            pauseLabel: "Pause", // текст для кнопки "Пауза"
-            closeLabel: "Close", // текст для кнопки "Закрыть"
-            randomStart: false, //начинать со случайного слайдера
-            timer: 'Pie', // Стиль таймера: "Pie", "360Bar" или "Bar"
-            timerBg: '#000', // Фон таймера
-            timerColor: '#EEE', // цвет таймера
-            timerOpacity: 0.5, // прозрачность таймера
-            timerDiameter: 30, // диаметр таймера
-            timerPadding: 4, // отступ для таймера
-            timerStroke: 3, // ширина границы таймера
-            timerBarStroke: 1, // ширина границы Bar тамера
-            timerBarStrokeColor: '#EEE', // Цвет границы таймера Bar
-            timerBarStrokeStyle: 'solid', // Стиль границы таймера Bar
+            keyboardNav: true, // РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃС‚СЂРµР»РѕРє РІР»РµРІРѕ / РІРїСЂР°РІРѕ
+            touchNav: true, // РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Touch swipe РґР»СЏ СЃРјРµРЅС‹ СЃР»Р°Р№РґРѕРІ
+            pauseOnHover: false, // РѕСЃС‚Р°РЅРѕРІРєР° СЃР»Р°Р№РґС€РѕСѓ РїСЂРё РЅР°РІРµРґРµРЅРёРё
+            nextLabel: "", // С‚РµРєСЃС‚ РґР»СЏ РєРЅРѕРїРєРё "Р’РїРµСЂРµРґ"
+            previousLabel: "", // С‚РµРєСЃС‚ РґР»СЏ РєРЅРѕРїРєРё "РќР°Р·Р°Рґ"
+            playLabel: "Play", // С‚РµРєСЃС‚ РґР»СЏ РєРЅРѕРїРєРё "РџР»РµР№"
+            pauseLabel: "Pause", // С‚РµРєСЃС‚ РґР»СЏ РєРЅРѕРїРєРё "РџР°СѓР·Р°"
+            closeLabel: "Close", // С‚РµРєСЃС‚ РґР»СЏ РєРЅРѕРїРєРё "Р—Р°РєСЂС‹С‚СЊ"
+            randomStart: false, //РЅР°С‡РёРЅР°С‚СЊ СЃРѕ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ СЃР»Р°Р№РґРµСЂР°
+            timer: 'Pie', // РЎС‚РёР»СЊ С‚Р°Р№РјРµСЂР°: "Pie", "360Bar" РёР»Рё "Bar"
+            timerBg: '#000', // Р¤РѕРЅ С‚Р°Р№РјРµСЂР°
+            timerColor: '#EEE', // С†РІРµС‚ С‚Р°Р№РјРµСЂР°
+            timerOpacity: 0.5, // РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ С‚Р°Р№РјРµСЂР°
+            timerDiameter: 30, // РґРёР°РјРµС‚СЂ С‚Р°Р№РјРµСЂР°
+            timerPadding: 4, // РѕС‚СЃС‚СѓРї РґР»СЏ С‚Р°Р№РјРµСЂР°
+            timerStroke: 3, // С€РёСЂРёРЅР° РіСЂР°РЅРёС†С‹ С‚Р°Р№РјРµСЂР°
+            timerBarStroke: 1, // С€РёСЂРёРЅР° РіСЂР°РЅРёС†С‹ Bar С‚Р°РјРµСЂР°
+            timerBarStrokeColor: '#EEE', // Р¦РІРµС‚ РіСЂР°РЅРёС†С‹ С‚Р°Р№РјРµСЂР° Bar
+            timerBarStrokeStyle: 'solid', // РЎС‚РёР»СЊ РіСЂР°РЅРёС†С‹ С‚Р°Р№РјРµСЂР° Bar
             timerX: 10, // Timer X position threshold
             timerY: 10, // Timer Y position threshold
             tooltipX: 5, // Tooltip X position threshold
             tooltipY: -5, // Tooltip Y position threshold
-            onBeforeChange: function(){}, // триггеры до перехода слайдера
-            onAfterChange: function(){}, // триггеры после перехода слайдера
-            onSlideshowEnd: function(){}, // триггеры после показа всех слайдов
-            onLastSlide: function(){}, // триггеры, когда показан последний слайдер
-            onAfterLoad: function(){}, // триггер, когда слайдер загружен
-            onPause: function(){}, // триггер, когда слайдер на паузе
-            onPlay: function(){} // триггер, когда слайдер проигрывается
+            onBeforeChange: function(){}, // С‚СЂРёРіРіРµСЂС‹ РґРѕ РїРµСЂРµС…РѕРґР° СЃР»Р°Р№РґРµСЂР°
+            onAfterChange: function(){}, // С‚СЂРёРіРіРµСЂС‹ РїРѕСЃР»Рµ РїРµСЂРµС…РѕРґР° СЃР»Р°Р№РґРµСЂР°
+            onSlideshowEnd: function(){}, // С‚СЂРёРіРіРµСЂС‹ РїРѕСЃР»Рµ РїРѕРєР°Р·Р° РІСЃРµС… СЃР»Р°Р№РґРѕРІ
+            onLastSlide: function(){}, // С‚СЂРёРіРіРµСЂС‹, РєРѕРіРґР° РїРѕРєР°Р·Р°РЅ РїРѕСЃР»РµРґРЅРёР№ СЃР»Р°Р№РґРµСЂ
+            onAfterLoad: function(){}, // С‚СЂРёРіРіРµСЂ, РєРѕРіРґР° СЃР»Р°Р№РґРµСЂ Р·Р°РіСЂСѓР¶РµРЅ
+            onPause: function(){}, // С‚СЂРёРіРіРµСЂ, РєРѕРіРґР° СЃР»Р°Р№РґРµСЂ РЅР° РїР°СѓР·Рµ
+            onPlay: function(){} // С‚СЂРёРіРіРµСЂ, РєРѕРіРґР° СЃР»Р°Р№РґРµСЂ РїСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ
         });
     });
+    $(document).ready(function(){
+        $('.bxslider').bxSlider();
+    });
+    $( function() {
+        $( "#datepicker" ).datepicker({
+            minDate: "+1d 0m 0y",
+            dateFormat: "dd.mm.yy",
+            changeMonth: true,
+            changeYear: true
+
+        });
+    } );
