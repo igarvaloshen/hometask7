@@ -103,16 +103,16 @@
     <form class="test-drive" id="test-drive-form"action="#">
         <h3 class="form-title">Тест Драйв</h3>
         <label for="name" class="name">Имя</label>
-        <input type="text" id="name"/>
+        <input type="text" id="name" required/>
 
         <div class="select-date">
         <label for="datepicker" class="date">Дата</label>
-        <input type="text" id="datepicker"/>
+        <input type="text" id="datepicker" required/>
         </div>
 
         <div class="time-select">
         <label for="hour" class="time">Время</label>
-        <select name="time" id="hour" form="test-drive-form">
+        <select name="time" id="hour" form="test-drive-form" required>
             <option value="" selected></option>
             <option value="">10</option>
             <option value="">11</option>
@@ -123,7 +123,7 @@
             <option value="">16</option>
             <option value="">17</option>
         </select>
-        <select name="time" id="minutes" form="test-drive-form">
+        <select name="time" id="minutes" form="test-drive-form" required>
             <option value="" selected></option>
             <option value="">00</option>
             <option value="">30</option>
@@ -131,11 +131,11 @@
         </div>
 
         <p class="model">Модель</p>
-        <input type="radio" name="car" id="venza"/>
+        <input type="radio" name="car" id="venza" required/>
         <label for="venza" class="venza-label">Venza</label><br/>
-        <input type="radio" name="car" id="corolla"/>
+        <input type="radio" name="car" id="corolla" required/>
         <label for="corolla" class="corolla-label">Corolla</label><br/>
-        <input type="checkbox" id="agree"/>
+        <input type="checkbox" id="agree" required/>
         <label for="agree" class="agree-label">Согласен с условиями тест драйва.</label>
         <input type="submit" value="записаться"/>
     </form>

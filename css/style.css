@@ -16,7 +16,7 @@ header  {
 .logo   {
     display: inline-block;
     margin: 10px 0 10px 0;
-    width: 32%;
+    width: 30%;
 }
 .toyota {
     display: inline-block;
@@ -31,11 +31,13 @@ header  {
 }
 .navbar {
     display: inline-block;
+    margin-left: 30px;
 }
 .navbar-li  {
     display: inline-block;
     margin-left: 50px;
     position: relative;
+    padding-bottom: 40px;
 }
 .menu-href  {
     text-decoration: none;
@@ -49,9 +51,12 @@ header  {
     height: 1px;
     border-bottom: 1px solid #ca3e38;
     position: absolute;
-    top: 129%;
+    top: 70%;
     left: 50%;
     margin-left: -19px;
+}
+.navbar-li:hover .dropdown  {
+    display: block;
 }
 .menu-href:hover    {
     color: #88140f;
@@ -61,7 +66,8 @@ header  {
     position: absolute;
     list-style: none;
     left: -18%;
-    top: 172%;
+    top: 95%;
+    display: none;
 }
 .dropdown-li    {
     width: 186px;
@@ -200,6 +206,10 @@ h1  {
 .num    {
     list-style: none;
     position: relative;
+    font-size: 16px;
+    text-align: left;
+    color: white;
+    font-family: helveticaneuecyrmedium, sans-serif;
 }
 ol{
     counter-reset: myCounter;
@@ -473,4 +483,46 @@ footer  {
     position: absolute;
     right: -45%;
     top: 26%;
+}
+input:required:focus {
+    border: 1px solid red !important;
+    outline: none;
+}
+input:required:valid  {
+    border: 1px solid green !important;
+}
+@media screen and (max-width: 1366px)   {
+    .wrapper    {
+        width: 1020px;
+    }
+    .logo-title {
+        font-size: 17px;
+    }
+    .menu-href  {
+        font-size: 20px;
+    }
+    .dropdown   {
+        left: -50%;
+    }
+    .dropdown-li    {
+        width: 150px;
+    }
+    .main-title    {
+        font-size: 80px;
+    }
+    h1  {
+        width: 100%;
+    }
+    .main-news  {
+        width: calc(50% - 50px);
+    }
+    .comment-content    {
+        margin-left: 15px;
+    }
+    .footer-slider {
+        margin-left: 10px;
+    }
+    .test-drive    {
+        width: 47%;
+    }
 }
